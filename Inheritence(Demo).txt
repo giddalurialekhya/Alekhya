@@ -1,0 +1,35 @@
+public class Main {
+    public static void main(String[] args) {
+        Demo2 d = new Demo2(10, 20);
+        d.display();
+    }
+}
+class Demo1 {
+    int a, b;
+    Demo1(int a, int b) {   // constructor name fixed
+        this.a = a;
+        this.b = b;
+    }
+    Demo1() {
+        a = 1500;
+        b = 2000;
+    }
+}
+class Demo2 extends Demo1 {
+    int x, y;
+    Demo2(int x, int y) {
+        super();            // calls Demo1()
+        this.x = x;
+        this.y = y;
+    }
+    Demo2() {
+        super();
+    }
+    void display() {
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(x);
+        System.out.println(y);
+    }
+}
+
