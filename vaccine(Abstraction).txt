@@ -1,0 +1,39 @@
+public class Vaccination {
+    public static void main(String[] args) {
+        VaccinationSuccessful v =
+                new VaccinationSuccessful(18, "Devika");
+        v.firstDose();
+        v.secondDose();
+        v.boosterDose();
+    }
+}
+abstract class Vaccine {
+    int age;
+    String name;
+    Vaccine(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
+    void firstDose() {
+        if (name.equalsIgnoreCase("Devika") && age >= 18) {
+            System.out.println("First dose taken successfully");
+            System.out.println("Please pay Rs.300");
+        } else {
+            System.out.println("Not eligible for first dose");
+        }
+    }
+    void secondDose() {
+        System.out.println("Second dose taken successfully");
+    }
+    abstract void boosterDose();
+}
+class VaccinationSuccessful extends Vaccine {
+    VaccinationSuccessful(int age, String name) {
+        super(age, name);
+    }
+    void boosterDose() {
+        System.out.println("Booster dose taken successfully");
+    }
+}
+
