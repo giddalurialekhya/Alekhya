@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class ExampleofExceptionhandling{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the Numerator :");
+        int a=sc.nextInt();
+        System.out.println("Enter the Denominator :");
+        int b=sc.nextInt();
+        try{
+            int quotient=a/b;
+            System.out.println("quotient");
+        }
+        catch(ArithmeticException e){
+             System.out.println(e.getMessage());
+        }
+        catch(NullPointerException e){
+             System.out.println();
+        }
+        
+    }
+}
