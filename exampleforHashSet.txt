@@ -1,0 +1,35 @@
+import java.util.HashSet;
+
+public class ExampleForHashSet {
+    public static void main(String[] args) {
+        Dog d = new Dog("Apam", "Lab");
+        HashSet<Dog> hs = new HashSet<>();
+        hs.add(d);
+
+        for (Dog e : hs) {
+            System.out.println(e);
+        }
+    }
+}
+
+class Dog {
+    private String name;
+    private String breed;
+
+    public Dog(String name, String breed) {
+        this.name = name;
+        this.breed = breed;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public String toString() {
+        return "Dog[name=" + name + ", breed=" + breed + "]";
+    }
+}
