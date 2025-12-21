@@ -1,0 +1,24 @@
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class ExampleForLinkedHashMap {
+    public static void main(String[] args) {
+
+        LinkedHashMap<String, Object> lhm = new LinkedHashMap<String, Object>();
+        lhm.put("Name", "ABC");
+        lhm.put("Age", 21);
+
+        System.out.println(lhm);
+        System.out.println("-----------------------------");
+
+        
+        System.out.println(lhm.get("Name"));
+
+        System.out.println("-----------------------------");
+
+        
+        for (String key : lhm.keySet()) {
+            System.out.println(key);
+        }
+    }
+}
